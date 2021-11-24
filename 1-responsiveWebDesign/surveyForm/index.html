@@ -8,15 +8,50 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <h1 id="title">Survey Title</h1>
-    <p id="description">This is the survey description!</p>
+    <h1 id="title">Football Game Registration</h1>
+    <h2 id="descriptiom">Fill the following form to attend next game!</h2>
     <form id="survey-form">
-        <label for="name">Name</label><br>
-        <input type="text" id="name" name="name"><br>
-        <label for="email">Email</label><br>
-        <input type="email" id="email" name="email"><br>
-        <label for="age">Age</label><br>
-        <input type="number" id="number" name="age" min="10" max="99"><br>
+        <div class="form-group">
+            <label id="name-label" for="name" >Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name">
+        </div>
+        <div class="form-group">
+            <label id="name-label" for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="Your email">
+        </div>
+        <div class="form-group">
+            <label id="number-label" for="number">Age:</label><br>
+            <input type="number" id="number" name="number" min="5" max="99" placeholder="Your age">
+        </div>
+        <div class="form-group" id="radio-group">
+            <p>Are a student currently enrolled?</p>
+            <label><input type="radio" name="enrolled" value="yes">Yes</label><br>
+            <label><input type="radio" name="enrolled" value="no">No</label>
+        </div>
+        <div class="form-group">
+            <p>Which school do you attend?</p>
+            <select id="dropdown" name="school">
+                <option value="jmsb">JMSB</option>
+                <option value="hec">HEC</option>
+                <option value="desautel">Desautel</option>
+                <option value="sherbrook">Sherbrook</option>
+            </select>
+        </div>
+        <div class="form-group" id="checkbox-group">
+            <p>Create your meal order:</p>
+            <label><input type="checkbox" value="burger">Burger</label><br>
+            <label><input type="checkbox" value="hotdog">Hotdog</label><br>
+            <label><input type="checkbox" value="nachos">Nachos</label><br>
+            <label><input type="checkbox" value="soda">Soda</label><br>
+            <label><input type="checkbox" value="beer">Beer</label>
+        </div>
+        <div class="form-group">
+            <p>Any specific requests?</p>
+            <textarea id="comments" placeholder="Enter your requests here..."></textarea>
+        </div>
+        <div class="form-group" id="submit-div">
+            <button type="submit"  id="submit-button">Submit</button>
+        </div>
     </form>
 </body>
 </html>
